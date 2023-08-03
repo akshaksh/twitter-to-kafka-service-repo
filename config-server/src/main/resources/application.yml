@@ -1,0 +1,22 @@
+server:
+  port: 8888
+logging:
+  level:
+    root: INFO
+    org.spring.framework.cloud.config: DEBUG
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/akshaksh/spring-cloud-config-server-repository
+          username: akshaksh
+          password: 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
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}18370ba962125f14e203768b4a315e7d7250ea6e930177156a8ec2609f0ef666b512adff41edff757c17004641d84416'

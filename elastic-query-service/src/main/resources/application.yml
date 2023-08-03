@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: elastic-query-service
+  profiles:
+    active: elastic_query
+  config:
+    import: 'configserver:'
+  cloud:
+    config:
+      name: elastic-query-service,config-client
+      username: spring_cloud_user
+      password: '{cipher}6362306d7d4a54408fd3f23e90a0297d3a5f322fe3329e5c30316193ed4a5d2ee4e1c6f206cae3e247ad461c03ffe95b'
