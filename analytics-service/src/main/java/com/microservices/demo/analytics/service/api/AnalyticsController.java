@@ -19,6 +19,12 @@ import java.util.Optional;
 @PreAuthorize("isAuthenticated()")
 @RestController
 @RequestMapping(value = "/", produces = "application/vnd.api.v1+json")
+@CrossOrigin(origins = {
+        "http://elastic-query-service-1:8183",
+        "http://elastic-query-service-2:8186",
+        "http://localhost:8183",
+        "http://localhost:8186"
+})
 public class AnalyticsController {
 
     private static final Logger LOG = LoggerFactory.getLogger(AnalyticsController.class);
