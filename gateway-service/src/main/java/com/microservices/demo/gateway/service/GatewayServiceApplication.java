@@ -1,4 +1,4 @@
-package com.microservices.demo.elastic.query.web.client;
+package com.microservices.demo.gateway.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackages = "com.microservices.demo")
-public class ElasticQueryWebClientApplication{
-  public static void main(String[] args) {
-    SpringApplication.run(ElasticQueryWebClientApplication.class, args);
-  }
+    public class GatewayServiceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(GatewayServiceApplication.class, args);
+    }
 }
+
