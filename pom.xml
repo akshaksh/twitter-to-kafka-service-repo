@@ -24,6 +24,8 @@
 		<module>reactive-elastic-query-web-client</module>
 		<module>kafka-streams-service</module>
         <module>analytics-service</module>
+        <module>discovery-service</module>
+        <module>gateway-service</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -58,6 +60,8 @@
 		<kafka-streams.version>3.5.0</kafka-streams.version>
 		<kafka-clients.version>3.5.0</kafka-clients.version>
 		<kafka-streams-avro-serde.version>7.4.0</kafka-streams-avro-serde.version>
+		<spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>1.0.4.RELEASE</spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>
+		<micrometer-registry-prometheus.version>1.5.2</micrometer-registry-prometheus.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -279,6 +283,31 @@
 				<groupId>org.apache.kafka</groupId>
 				<artifactId>kafka-clients</artifactId>
 				<version>${kafka-clients.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+				<version>${spring.cloud.config.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+				<version>${spring.cloud.config.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+				<version>${spring-cloud-starter-circuitbreaker-reactor-resilience4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-gateway</artifactId>
+				<version>${spring.cloud.config.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-registry-prometheus</artifactId>
+				<version>${micrometer-registry-prometheus.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
